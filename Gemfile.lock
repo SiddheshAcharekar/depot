@@ -366,6 +366,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.2)
     standard (1.0.5)
       rubocop (= 1.12.1)
       rubocop-performance (= 1.10.1)
@@ -443,6 +444,7 @@ DEPENDENCIES
   sidekiq
   sidekiq-cron
   sidekiq-failures
+  sqlite3
   standard
   timezone (~> 1.0)
   tzinfo-data
