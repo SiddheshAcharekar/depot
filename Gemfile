@@ -38,6 +38,9 @@ gem "timezone", "~> 1.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "versionist"
 gem "sqlite3"
+gem "sass-rails"
+gem "turbolinks"
+gem "coffee-rails"
 
 # EB platform dependent versions
 gem "puma", "5.2.2"
