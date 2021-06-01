@@ -11,7 +11,7 @@ RSpec.describe Product, type: :model do
     subject.title = 'Test'
     subject.description = 'Test'
     subject.image_url = 'Test.jpg'
-    subject.price = '26'
+    subject.price = 26
 
     expect(subject).to be_valid
   end
@@ -20,11 +20,35 @@ RSpec.describe Product, type: :model do
     subject.title = nil
     subject.description = 'Test'
     subject.image_url = 'Test.jpg'
-    subject.price = '26'
+    subject.price = 26
+
     expect(subject).to_not be_valid
   end
 
-  it 'is not valid without a description'
-  it 'is not valid without a image_url'
-  it 'is not valid without a price'
+  it 'is not valid without a description' do
+    subject.title = 'Test'
+    subject.description = nil
+    subject.image_url = 'Test.jpg'
+    subject.price = 26
+
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a image_url' do
+    subject.title = 'Test'
+    subject.description = 'Test'
+    subject.image_url = nil
+    subject.price = 26
+
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without a price' do
+    subject.title = 'Test'
+    subject.description = 'Test'
+    subject.image_url = 'Test.jpg'
+    subject.price = nil
+
+    expect(subject).to_not be_valid
+  end
 end
